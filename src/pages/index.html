@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <!-- 元信息 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="misitebao,misipage,homepage,theme,个人主页主题,米司特包"
+    />
+    <meta name="author" content="Misitebao <i@misitebao.com>" />
+    <meta name="generator" content="Static template source code" />
+    <meta name="copyright" content="Misitebao" />
+    <!-- 默认加载资源 -->
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <!-- 引入包含模板编译器的vue库 -->
+    <% if(process.env.NODE_ENV === 'development'){ %>
+    <script src="https://unpkg.com/vue@next/dist/vue.global.js"></script>
+    <% } else { %>
+    <script src="https://unpkg.com/vue@next/dist/vue.global.prod.js"></script>
+    <% } %>
+    <!-- 网页标题 -->
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- 打包生成资源 -->
+  </head>
+
+  <body>
+    <noscript>
+      <div>
+        <strong>很抱歉，如果没有启用 JavaScript，页面将无法正常工作。</strong>
+      </div>
+    </noscript>
+    <div id="app">
+      <!-- Header -->
+      <!-- <div class="header">
+      <div v-text="headerName"></div>
+    </div> -->
+      <!-- Main content -->
+      <div class="content">
+        <div class="introduction">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-24">
+                <!-- Personal profile -->
+                <h1 class="hello">Hello</h1>
+                <h1 class="name">My network name is Misitebao</h1>
+                <p class="description">
+                  I am a full-stack software developer, mainly using front-end
+                  and Go technologies. I am active in the open source community
+                  most of the time. I am currently developing the Go framework
+                  <a class="link" href="https://github.com/tigateam/tigago"
+                    >Tigago</a
+                  >
+                  and other applications. If you are interested, you can follow
+                  me on
+                  <a class="link" href="https://github.com/misitebao">Github</a
+                  >. At the same time I am also active on
+                  <a class="link" href="https://twitter.com/misitebao"
+                    >Twitter</a
+                  >
+                  and
+                  <a
+                    class="link"
+                    href="https://www.youtube.com/channel/UCGlgW9t0HnKDlkcS1dH7X3g"
+                    >Youtube</a
+                  >.
+                </p>
+                <p class="description">
+                  If you happen to also speak Chinese, my Chinese net name is
+                  "米司特包", and you can also find me on
+                  <a class="link" href="https://weibo.com/misitebao">微博</a>,
+                  <a class="link" href="https://www.zhihu.com/people/misitebao"
+                    >知乎</a
+                  >,
+                  <a class="link" href="https://juejin.cn/user/2295436009291246"
+                    >掘金</a
+                  >
+                  and
+                  <a class="link" href="https://space.bilibili.com/97480642/"
+                    >哔哩哔哩</a
+                  >.
+                </p>
+                <p class="description">
+                  In addition to programming, I also like science fiction movies
+                  and video games. The games I often play include League of
+                  Legends, Playerunkown's Battlegrounds(PUBG), and Game for
+                  Peace.
+                </p>
+                <!-- Contact information -->
+                <div class="social">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-xs-8 col-xl-24">
+                        <div class="social-item">
+                          <a href="javascript:void(0)" class="name"
+                            >WeChat:misitebao_work</a
+                          >
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/misitebao/CDN@main/qrcode/wechat_misitebao_work.jpg"
+                            alt=""
+                            class="qrcode"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-xs-8 col-xl-24">
+                        <div class="social-item">
+                          <a href="javascript:void(0)" class="name"
+                            >QQ:1028817941</a
+                          >
+                          <img
+                            src="https://cdn.jsdelivr.net/gh/misitebao/CDN@main/qrcode/qq_misitebao_work.jpg"
+                            alt=""
+                            class="qrcode"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-xs-8 col-xl-24">
+                        <div class="social-item">
+                          <a href="javascript:void(0)" class="name"
+                            >Email:i@misitebao.com</a
+                          >
+                          <!-- <img src="https://cdn.jsdelivr.net/gh/misitebao/CDN@main/bg/013.svg" alt="" class="qrcode" /> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="footer">
+        <div align="center">
+          <a
+            href="https://beian.miit.gov.cn/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >备案号：鄂ICP备20006255号</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
