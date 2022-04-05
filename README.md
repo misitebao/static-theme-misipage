@@ -119,7 +119,7 @@ Preview front-end resources in local service mode:
 
 ```shell
 
-npm run serve
+npm run preview
 ```
 
 <!-- Write the detailed instructions for the project here, and tell users how to use your project. -->
