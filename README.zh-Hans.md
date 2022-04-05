@@ -122,7 +122,7 @@ npm run build
 
 ```shell
 
-npm run serve
+npm run preview
 ```
 
 <span id="nav-8"></span>
