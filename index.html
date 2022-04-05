@@ -9,9 +9,9 @@
   <body>
     <div id="app">
       <!-- 顶部 -->
-      <header class="header" id="header" v-text="headerName">
+      <header class="header" id="header">
         <div class="header_container">
-          <nav class="header_nav"></nav>
+          <nav class="header_nav" v-text="headerName"></nav>
           <div class="header_menu"></div>
         </div>
       </header>
@@ -20,9 +20,9 @@
         <div v-text="name"></div>
       </main>
       <!-- 底部 -->
-      <header class="footer" id="footer" v-text="footerName">
+      <header class="footer" id="footer">
         <div class="footer_container">
-          <div class="copyright"></div>
+          <div class="copyright" v-text="footerName"></div>
         </div>
       </header>
     </div>
