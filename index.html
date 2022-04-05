@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 顶部 -->
+      <header class="header" id="header" v-text="headerName">
+        <div class="header_container">
+          <nav class="header_nav"></nav>
+          <div class="header_menu"></div>
+        </div>
+      </header>
+      <!-- 主体 -->
+      <main class="main" id="main">
+        <div v-text="name"></div>
+      </main>
+      <!-- 底部 -->
+      <header class="footer" id="footer" v-text="footerName">
+        <div class="footer_container">
+          <div class="copyright"></div>
+        </div>
+      </header>
+    </div>
+    <script type="module" src="./src/pages/index/main.js"></script>
+  </body>
+</html>

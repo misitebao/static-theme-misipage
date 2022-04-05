@@ -1,11 +1,8 @@
 import { createApp, ref } from "vue/dist/vue.esm-bundler.js";
+// import App from "../../App.vue";
 
-import "@/styles/index.scss";
-
-// import App from "@/components/HelloWorld.vue";
-
-import useHeader from "@/hooks/common/useHeader.js";
-import useFooter from "@/hooks/common/useFooter.js";
+import useHeader from "@/hooks/useHeader.js";
+import useFooter from "@/hooks/useFooter.js";
 
 createApp({
   // 设置Vue模板文件渲染标记符,主要是为了避免和渲染引擎标记冲突
@@ -14,13 +11,13 @@ createApp({
     comments: true,
   },
   components: {
-    App,
+    // App,
   },
   setup() {
     const { name: headerName } = useHeader();
     const { name: footerName } = useFooter();
 
-    const name = ref("index page");
+    const name = ref("about page");
 
     return {
       headerName,
