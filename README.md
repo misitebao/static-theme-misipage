@@ -5,11 +5,14 @@
 </p> -->
 
 <p align="left">
-  <a href="https://github.com/misitebao/static-theme-misipage/blob/main/LICENSE">
+  <a href="./LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/misitebao/static-theme-misipage?style=flat-square"/>
   </a>
   <a href="https://github.com/misitebao/standard-repository">
-    <img alt="GitHub" src="https://img.shields.io/badge/Readme--Style-standard--repository-brightgreen?style=flat-square&color=f83500"/>
+    <img
+      alt="GitHub"
+      src="https://cdn.jsdelivr.net/gh/misitebao/standard-repository@main/assets/badge_flat-square.svg"
+    />
   </a>
 </p>
 
@@ -39,7 +42,7 @@
 - [Contributors](#nav-9)
 - [Community Exchange](#nav-10)
 - [Part Of Users](#nav-11)
-- [Release History](CHANGE.md)
+- [Release History](CHANGELOG.md)
 - [Donators](#nav-12)
 - [Sponsors](#nav-13)
 - [Special Thanks](#nav-14)
