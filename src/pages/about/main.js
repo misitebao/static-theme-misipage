@@ -1,5 +1,6 @@
 import { createApp, ref } from "vue/dist/vue.esm-bundler.js";
-// import App from "../../App.vue";
+
+import "./styles/main.scss";
 
 import useHeader from "@/hooks/useHeader.js";
 import useFooter from "@/hooks/useFooter.js";

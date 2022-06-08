@@ -5,6 +5,8 @@ import "./styles/main.scss";
 import useHeader from "@/hooks/useHeader.js";
 import useFooter from "@/hooks/useFooter.js";
 
+console.log("zhangsan");
+
 createApp({
   // 设置Vue模板文件渲染标记符,主要是为了避免和渲染引擎标记冲突
   compilerOptions: {
