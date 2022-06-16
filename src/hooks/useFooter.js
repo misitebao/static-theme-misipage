@@ -1,7 +1,7 @@
-import { ref } from "vue/dist/vue.esm-bundler.js";
+import { ref } from 'vue/dist/vue.esm-bundler.js';
 
 export default function () {
-  const name = ref("footer useFooter hooks");
+  const name = ref('footer useFooter hooks');
 
   return {
     name,

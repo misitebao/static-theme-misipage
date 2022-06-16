@@ -6,7 +6,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "lint-fix": "eslint ./src --fix --ext .js"
+    "lint":"eslint src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "vue": "^3.2.36"
