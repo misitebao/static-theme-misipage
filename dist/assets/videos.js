@@ -1,0 +1,1 @@
+import{c as n,u as s,a as r,r as t}from"./useFooter.js";console.log("zhangsan");n({compilerOptions:{delimiters:["{[","]}"],comments:!0},components:{},setup(){const{name:e}=s(),{name:a}=r(),o=t("index page");return{headerName:e,footerName:a,name:o}}}).mount("#app");

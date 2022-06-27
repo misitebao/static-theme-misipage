@@ -1,1 +1,1 @@
-import{u as a,a as r}from"./useFooter.js";import{c as m,r as s}from"./vendor.js";m({compilerOptions:{delimiters:["{[","]}"],comments:!0},components:{},setup(){const{name:e}=a(),{name:o}=r(),t=s("about page");return{headerName:e,footerName:o,name:t}}}).mount("#app");
+import{c as t,u as r,a as m,r as s}from"./useFooter.js";t({compilerOptions:{delimiters:["{[","]}"],comments:!0},components:{},setup(){const{name:e}=r(),{name:a}=m(),o=s("about page");return{headerName:e,footerName:a,name:o}}}).mount("#app");
