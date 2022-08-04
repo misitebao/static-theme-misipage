@@ -9,13 +9,16 @@
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix"
   },
+  "engines": {
+    "node": ">=16.14.0",
+    "npm": "^7.0.0"
+  },
   "dependencies": {
     "petite-vue": "^0.4.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@vitejs/plugin-vue": "^2.3.3",
     "autoprefixer": "^10.4.7",
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
