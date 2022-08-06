@@ -1,1 +1,1 @@
-import{c as r,u as t,a as m,r as n}from"./useFooter.js";r({compilerOptions:{delimiters:["{[","]}"],comments:!0},components:{},setup(){const{name:e}=t(),{name:a}=m(),o=n("index page");return{headerName:e,footerName:a,name:o}}}).mount("#app");
+import{Q as a}from"./petite-vue.es.js";a({pageName:"index",pingFunc(){console.log(`pong ${this.pageName} page`)}}).mount("#app");

@@ -1,1 +1,1 @@
-import{c as t,u as r,a as m,r as s}from"./useFooter.js";t({compilerOptions:{delimiters:["{[","]}"],comments:!0},components:{},setup(){const{name:e}=r(),{name:a}=m(),o=s("about page");return{headerName:e,footerName:a,name:o}}}).mount("#app");
+import{Q as m}from"./petite-vue.es.js";m({}).mount("#app");
