@@ -5,10 +5,10 @@ module.exports = {
     commonjs: true,
     node: true,
   },
-  extends: ["plugin:prettier/recommended"],
+  extends: ['plugin:prettier/recommended'],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   rules: {},
 };
