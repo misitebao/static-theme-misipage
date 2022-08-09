@@ -8,10 +8,10 @@
   <a href="./LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/misitebao/static-theme-misipage?style=flat-square"/>
   </a>
-  <a href="https://github.com/misitebao/standard-repository">
+  <a href="https://github.com/misitebao/yakia">
     <img
       alt="GitHub"
-      src="https://cdn.jsdelivr.net/gh/misitebao/standard-repository@main/assets/badge_flat-square.svg"
+      src="https://cdn.jsdelivr.net/gh/misitebao/yakia@main/assets/badge_flat-square.svg"
     />
   </a>
 </p>
