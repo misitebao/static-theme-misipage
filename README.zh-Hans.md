@@ -1,55 +1,53 @@
-# Static Theme Misipage
+<h1 align="center">Static Theme Misipage</h1>
 
 <!-- <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/misitebao/standard-repository@main/logo.gif" height="300" />
 </p> -->
 
-<p align="left">
+<p align="center">
   <a href="https://github.com/misitebao/static-theme-misipage/blob/main/LICENSE">
-    <img alt="GitHub" src="https://img.shields.io/github/license/misitebao/static-theme-misipage?style=flat-square"/>
+    <img alt="GitHub" src="https://img.shields.io/github/license/misitebao/static-theme-misipage"/>
   </a>
   <a href="https://github.com/misitebao/yakia">
-    <img alt="GitHub" src="https://cdn.jsdelivr.net/gh/misitebao/yakia@main/assets/badge_flat-square.svg"/>
+    <img alt="GitHub" src="https://cdn.jsdelivr.net/gh/misitebao/yakia@main/assets/badge_flat.svg"/>
   </a>
 </p>
 
-<span id="nav-1"></span>
+<div align="center">
+<strong>
+<samp>
 
-## 国际化
+[English](README.md) · [简体中文](README.zh-Hans.md)
 
-<!-- 这是多语言列表 -->
-
-[English](README.md) | [简体中文](README.zh-Hans.md)
-
-<span id="nav-2"></span>
+</samp>
+</strong>
+</div>
 
 ## 内容目录
 
 <details>
   <summary>点我 打开/关闭 目录列表</summary>
 
-- [国际化](#nav-1)
-- [内容目录](#nav-2)
-- [项目介绍](#nav-3)
-  - [官方网站](#nav-3-1)
-  - [背景](#nav-3-2)
-- [图形演示](#nav-4)
-- [功能特色](#nav-5)
-- [架构](#nav-6)
-- [新手入门](#nav-7)
-- [维护者](#nav-8)
-- [贡献者](#nav-9)
-- [社区交流](#nav-10)
-- [部分用户](#nav-11)
-- [发布记录](CHANGE.md)
-- [捐赠者](#nav-12)
-- [赞助商](#nav-13)
-- [特别感谢](#nav-14)
-- [版权许可](#nav-15)
+- [内容目录](#内容目录)
+- [项目介绍](#项目介绍)
+  - [官方网站](#官方网站)
+  - [背景](#背景)
+  - [移植](#移植)
+- [图形演示](#图形演示)
+- [功能](#功能)
+- [架构](#架构)
+- [快速入门](#快速入门)
+- [维护者](#维护者)
+- [贡献者](#贡献者)
+- [社区交流](#社区交流)
+- [部分用户](#部分用户)
+- [发布记录](#发布记录)
+- [捐赠者](#捐赠者)
+- [赞助商](#赞助商)
+- [特别感谢](#特别感谢)
+- [许可证](#许可证)
 
 </details>
-
-<span id="nav-3"></span>
 
 ## 项目介绍
 
@@ -57,25 +55,23 @@
 
 本项目是一个适用于博客网站的静态模板，可用于任意模板引擎。
 
-<span id="nav-3-1"></span>
-
 <!-- ### 官方网站 -->
 
 <!-- 在此填写您项目的官网地址，包括主页、文档等。 -->
-
-<span id="nav-3-2"></span>
 
 <!-- ### 背景 -->
 
 <!-- 这里填写项目创作背景 -->
 
-<span id="nav-4"></span>
+### 移植
+
+| 目标 | 存储库                                                                  | 最新版本                                                                                                                                               |
+| ---- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Hugo | [hugo-theme-misipage](https://github.com/misitebao/hugo-theme-misipage) | ![GitHub tag version (latest SemVer pre-release)](https://img.shields.io/github/v/tag/misitebao/hugo-theme-misipage?include_prereleases&label=version) |
 
 <!-- ## 图形演示 -->
 
 <!-- 把你项目的demo放在这里，可以是具体的访问地址、图片截图、Gif或者视频等。 -->
-
-<span id="nav-5"></span>
 
 ## 功能特色
 
@@ -86,13 +82,9 @@
 - 支持用于任意模板引擎
 - 支持任意静态网站生成器
 
-<span id="nav-6"></span>
-
 <!-- ## 架构 -->
 
 <!-- 在这里填写你的项目架构图或描述，你可以放置项目目录描述 -->
-
-<span id="nav-7"></span>
 
 ## 新手入门
 
@@ -125,8 +117,6 @@ npm run build
 npm run preview
 ```
 
-<span id="nav-8"></span>
-
 ## 维护者
 
 <!-- 这里填写项目作者的相关信息 -->
@@ -142,13 +132,9 @@ npm run preview
 
 </details>
 
-<span id="nav-9"></span>
-
 <!-- ## 贡献者 -->
 
 <!-- 这里填写项目贡献者列表，通常是列表，当然也可以用图片代替。 -->
-
-<span id="nav-10"></span>
 
 ## 社区交流
 
@@ -156,33 +142,23 @@ npm run preview
 
 <!-- 此处填写项目的线上线下交流地址，可以是即时通讯群、社区、讨论群等。 -->
 
-<span id="nav-11"></span>
-
 ## 部分用户
 
 <!-- 在此处填写项目的用户列表，并告诉访问者哪些用户正在使用您的项目。 -->
 
 - [hugo-theme-misipage](https://github.com/misitebao/hugo-theme-misipage) - Misipage 主题的 [Hugo](https://github.com/gohugoio/hugo) 移植版本
 
-<span id="nav-12"></span>
-
 <!-- ## 捐赠者 -->
 
 <!-- 在这里填写捐赠者名单 -->
-
-<span id="nav-13"></span>
 
 <!-- ## 赞助商 -->
 
 <!-- 在这里填写赞助商名单 -->
 
-<span id="nav-14"></span>
-
 <!-- ## 特别感谢 -->
 
 <!-- 在这里填写特别感谢名单，可以是任何人或事物。 -->
-
-<span id="nav-15"></span>
 
 ## 版权许可
 
