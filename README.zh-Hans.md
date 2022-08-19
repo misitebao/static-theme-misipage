@@ -11,6 +11,9 @@
   <a href="https://github.com/misitebao/yakia">
     <img alt="GitHub" src="https://cdn.jsdelivr.net/gh/misitebao/yakia@main/assets/badge_flat.svg"/>
   </a>
+  <a href="https://github.com/misitebao/static-theme-misipage">
+    <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/misitebao/static-theme-misipage?include_prereleases&label=version"/>
+  </a>
 </p>
 
 <div align="center">
