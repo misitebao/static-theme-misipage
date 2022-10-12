@@ -1,10 +1,11 @@
-import { createApp } from 'petite-vue';
+import Alpine from 'alpinejs';
 
 import './styles/main.scss';
 
-createApp({
-  pageName: 'index',
-  pingFunc() {
-    console.log(`pong ${this.pageName} page`);
-  },
-}).mount('#app');
+import theme from '../../hooks/theme';
+
+window.Alpine = Alpine;
+
+Alpine.data('theme', theme);
+
+Alpine.start();
