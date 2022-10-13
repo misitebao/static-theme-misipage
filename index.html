@@ -362,21 +362,44 @@
     </div>
     <script type="module" src="./src/pages/index/main.js"></script>
 
-    <script
-      src="https://giscus.app/client.js"
-      data-repo="misitebao/static-theme-misipage"
-      data-repo-id="R_kgDOGUwLQA"
-      data-category="Comments"
-      data-category-id="DIC_kwDOGUwLQM4CR-Bm"
-      data-mapping="og:title"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="bottom"
-      data-theme="light"
-      data-lang="zh-CN"
-      crossorigin="anonymous"
-      async
-    ></script>
+    <script>
+      const themeMapping = {
+        light: 'light',
+        dark: 'dark_dimmed',
+      };
+
+      let theme = '';
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        theme = 'dark';
+      } else {
+        theme = 'light';
+      }
+
+      const giscusAttributes = {
+        src: 'https://giscus.app/client.js',
+        'data-repo': 'misitebao/static-theme-misipage',
+        'data-repo-id': 'R_kgDOGUwLQA',
+        'data-category': 'Comments',
+        'data-category-id': 'DIC_kwDOGUwLQM4CR-Bm',
+        'data-mapping': 'og:title',
+        'data-strict': '0',
+        'data-reactions-enabled': '1',
+        'data-emit-metadata': '0',
+        'data-input-position': 'bottom',
+        'data-theme': themeMapping[theme],
+        'data-lang': 'en',
+        crossorigin: 'anonymous',
+        async: '',
+      };
+
+      const giscusScript = document.createElement('script');
+      Object.entries(giscusAttributes).forEach(([key, value]) =>
+        giscusScript.setAttribute(key, value)
+      );
+      document.body.appendChild(giscusScript);
+    </script>
   </body>
 </html>
