@@ -1,111 +1,384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="theme" x-bind:data-theme="theme">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>首页</title>
+    <meta property="og:title" content="首页" />
     <script type="module" crossorigin src="/assets/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/petite-vue.es.js">
     <link rel="stylesheet" href="/assets/index.css">
   </head>
-  <body>
-    <noscript>
-      <div>
-        <strong>很抱歉，如果没有启用 JavaScript，页面将无法正常工作。</strong>
-      </div>
-    </noscript>
+  <body
+    class="min-h-screen bg-gradient-to-br from-violet-200 to-sky-200 dark:bg-gradient-to-br dark:from-slate-500 dark:to-black"
+  >
     <div id="app">
-      <!-- Header Start-->
-      <header class="bg-slate-50">
-        <div class="container flex items-center justify-between mx-auto px-4 py-2">
-          <a class="block w-8 h-8 rounded-full overflow-hidden" href="/">
-            <img src="/logo.webp" alt=""
-          /></a>
-          <!-- 非移动端导航条 -->
-          <nav class="hidden md:block">
-            <ul class="flex">
-              <li class="mx-2">
-                <a
-                  class="block px-2 py-0.5 rounded-sm hover:bg-slate-300 hover:text-white bg-slate-300 text-white"
-                  href="/"
-                  >主页</a
-                >
-              </li>
-              <li class="mx-2">
-                <a
-                  class="block px-2 py-0.5 rounded-sm hover:bg-slate-300 hover:text-white"
-                  href="/projects.html"
-                  >项目</a
-                >
-              </li>
-              <li class="mx-2">
-                <a
-                  class="block px-2 py-0.5 rounded-sm hover:bg-slate-300 hover:text-white"
-                  href="/videos.html"
-                  >视频</a
-                >
-              </li>
-              <li class="mx-2">
-                <a
-                  class="block px-2 py-0.5 rounded-sm hover:bg-slate-300 hover:text-white"
-                  href="/about.html"
-                  >关于</a
-                >
-              </li>
-              <li class="mx-2">
-                <a
-                  class="block px-2 py-0.5 rounded-sm hover:bg-slate-300 hover:text-white"
-                  href="/sponsors.html"
-                  >赞助</a
-                >
-              </li>
-              <li class="mx-2">
-                <a
-                  class="block px-2 py-0.5 rounded-sm hover:bg-slate-300 hover:text-white"
-                  href="/links.html"
-                  >友情链接</a
-                >
-              </li>
-
-              <li class="mx-2">
-                <a
-                  class="block px-2 py-0.5 rounded-sm hover:bg-slate-300 hover:text-white"
-                  href="https://blog.misitebao.com"
-                  >博客</a
-                >
-              </li>
-            </ul>
-          </nav>
-
-          <a
-            class="block px-4 py-1 rounded-full bg-slate-400 text-white hover:text-orange-100"
-            href="https://github.com/misitebao"
-            >关注我</a
+      <!-- Header Start -->
+      <!-- <header class="bg-slate-400">头部</header> -->
+      <div>
+        <div class="light" x-on:click="change('light')">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
           >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+            />
+          </svg>
         </div>
-      </header>
+        <div class="dark" x-on:click="change('dark')">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+            />
+          </svg>
+        </div>
+      </div>
 
       <!-- Header End -->
 
       <!-- Main Start -->
-      <section class="min-h-screen bg-gradient-to-r from-violet-500 to-blue-500">
-        <div class="container mx-auto p-4">主体内容</div>
-      </section>
+      <main class="py-24">
+        <div class="container mx-auto px-2.5 lg:px-5">
+          <div class="mx-auto w-28 h-28 rounded-full overflow-hidden bg-black">
+            <img
+              src="https://cdn.jsdelivr.net/gh/misitebao/static@latest/gravatar-bg-white.png"
+              alt="Misite Bao"
+            />
+          </div>
+
+          <article class="mx-auto my-20 max-w-none prose prose-lg dark:prose-invert">
+            <h1 id="index">Index</h1>
+            <h1 id="community-guide">Community Guide</h1>
+            <div class="highlight">
+              <pre
+                tabindex="0"
+                style="
+                  color: #f8f8f2;
+                  background-color: #272822;
+                  -moz-tab-size: 4;
+                  -o-tab-size: 4;
+                  tab-size: 4;
+                "
+              ><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Alpine</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;alpinejs&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;./styles/main.scss&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>window.<span style="color:#a6e22e">Alpine</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Alpine</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Alpine</span>.<span style="color:#a6e22e">start</span>();
+</span></span></code></pre>
+            </div>
+            <p>
+              The number of Wails users is growing at an incredible rate, and if you&rsquo;re
+              reading this, chances are you&rsquo;re ready to join. So&hellip; welcome!
+            </p>
+            <h2 id="resources">Resources</h2>
+            <h3 id="code-of-conduct">Code of Conduct</h3>
+            <p>
+              This <a href="./coc">Code of Conduct</a> is an easy guide to develop the technical
+              communities in which we participate.
+            </p>
+            <h3 id="stay-in-the-know">Stay in the Know</h3>
+            <ul>
+              <li>
+                Follow our
+                <a href="https://twitter.com/wailsapp">official Twitter account</a>.
+              </li>
+            </ul>
+            <h3 id="get-support">Get Support</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/wailsapp/wails">GitHub</a> - If you have a bug to report
+                or feature to request, that&rsquo;s what the GitHub issues are for. Please respect
+                the rules specified in each repository&rsquo;s issue template.
+              </li>
+              <li>
+                <a href="https://gophers.slack.com/messages/CJ4P9F7MZ/">Slack</a>
+                - A place for Wails devs to meet and chat in real time.
+              </li>
+              <li>
+                <a
+                  href="https://qm.qq.com/cgi-bin/qm/qr?k=PmIURne5hFGNd7QWzW5qd6FV-INEjNJv&amp;jump_from=webapi"
+                  >QQ Group(中文)</a
+                >
+                - A Wails group for Chinese developers to communicate, where you can get help from
+                other developers.
+              </li>
+            </ul>
+            <h3 id="explore-the-ecosystem">Explore the Ecosystem</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/wailsapp/awesome-wails">The Awesome Wails Page</a>
+                - See what other awesome resources have been published by other awesome people.
+              </li>
+            </ul>
+            <h2 id="ways-of-contributing">Ways of contributing</h2>
+            <p>
+              Wails is an open source, community driven project. We welcome anyone to join us in
+              contributing to the project. This documentation is aimed at anyone wishing to get
+              familiar with the project and the development processes.
+            </p>
+            <p>There are many ways to contribute to the project:</p>
+            <ul>
+              <li>Developing new features</li>
+              <li>Fixing bugs</li>
+              <li>Testing</li>
+              <li>Documenting features</li>
+              <li>Writing tutorials / guides</li>
+              <li>Helping others on the issues + discussions boards</li>
+            </ul>
+            <p>
+              Guides for these have been created in their own sections. Before getting started,
+              please introduce yourself in the
+              <a href="https://github.com/wailsapp/wails/discussions/1520">Contributing to Wails</a>
+              discussion.
+            </p>
+            <h3 id="developing-new-features">Developing New Features</h3>
+            <p>
+              We are always keen to add features to Wails and expand on what the project can do. The
+              process for adding new features are as follows:
+            </p>
+            <ul>
+              <li>
+                Pick an enhancement ticket with the &ldquo;TODO&rdquo; label. It&rsquo;s preferable
+                to select one from the current
+                <a href="https://github.com/orgs/wailsapp/projects/1/views/1">Backlog</a>
+                but the choice is yours.
+              </li>
+              <li>
+                Before developing, check that the ticket includes the following information:
+                <ul>
+                  <li>The purpose of the enhancement</li>
+                  <li>What is out of scope for the enhancement</li>
+                  <li>
+                    What platforms the enhancement targets (most features should be cross-platform
+                    unless there&rsquo;s a very specific reason)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                If the ticket does not include this information, feel free to request the
+                information from the person who opened the ticket. Sometimes placeholder tickets are
+                created and require more details
+              </li>
+              <li>Comment on the ticket stating if you wish to develop the feature</li>
+              <li>
+                Clone the repository and create a branch with the format
+                <code>feature/&lt;ticket_number&gt;_&lt;ticket_title&gt;</code>
+              </li>
+              <li>
+                New features often require documentation so please ensure you have also added or
+                updated the documentation as part of the changes
+              </li>
+              <li>
+                Once the feature is ready for testing, create a draft PR. Please ensure the PR
+                description has the test scenarios and test cases listed with checkmarks, so that
+                others can know what still needs to be tested.
+              </li>
+              <li>
+                Once all the testing is completed, please update the status of the PR from draft and
+                leave a message.
+              </li>
+            </ul>
+            <h3 id="fixing-bugs">Fixing Bugs</h3>
+            <p>The process for fixing bugs are as follows:</p>
+            <ul>
+              <li>
+                Check the current
+                <a href="https://github.com/orgs/wailsapp/projects/1/views/1">Backlog</a>
+                and select a bug to fix
+              </li>
+              <li>Before developing, check that the ticket includes the following information:</li>
+              <li>The scope of the issue including platforms affected</li>
+              <li>
+                The steps to reproduce. Sometimes bugs are opened that are not Wails issues and the
+                onus is on the reporter to prove that it is a Wails issue with a
+                <a href="https://stackoverflow.com/help/minimal-reproducible-example"
+                  >minimal reproducible example</a
+                >
+              </li>
+              <li>The output of <code>wails doctor</code></li>
+              <li>
+                If the ticket does not include this information, feel free to request the
+                information from the person who opened the ticket.
+              </li>
+              <li>Comment on the ticket stating you wish to develop a fix</li>
+              <li>
+                Clone the repository and create a branch with the format
+                <code>bugfix/&lt;ticket_number&gt;_&lt;ticket_title&gt;</code>
+              </li>
+              <li>
+                Once the fix is ready for testing, create a draft PR. Please ensure the PR
+                description has the test scenarios and test cases listed with checkmarks, so that
+                others can know what still needs to be tested.
+              </li>
+              <li>
+                Once all the testing is completed, please update the status of the PR from draft and
+                leave a message.
+              </li>
+            </ul>
+            <h3 id="testing">Testing</h3>
+            <p>
+              Testing is vitally important to ensure quality in the project. There are a couple of
+              scenarios where testing can really help the project:
+            </p>
+            <ul>
+              <li>Testing if a bug is reproducible on your local system</li>
+              <li>Testing PRs to ensure that they work correctly</li>
+            </ul>
+            <p>
+              If you chose to test if someone&rsquo;s bug report is reproducible on your local
+              system, then feel free to add a comment on the ticket confirming this with the output
+              of
+              <code>wails doctor</code>.
+            </p>
+            <p>
+              To test PRs, choose a PR to test and check if the PR description has the testing
+              scenarios listed. If not, please ask the person who opened the PR to provide that
+              list. Once you have determined a valid test scenario, please report your findings on
+              the PR.
+            </p>
+            <p>
+              If you ever need more clarity or help on testing, please ask a question in the
+              <a href="https://github.com/wailsapp/wails/discussions/1520">Contributing to Wails</a>
+              discussion or on slack.
+            </p>
+            <h3 id="documenting">Documenting</h3>
+            <p>
+              This website is also the main documentation site for the project. Sometimes this gets
+              out of date and needs some slight adjustments. Some of the documentation isn&rsquo;t
+              written to the best standards either. Developing documentation is hard and so any
+              contribution to this is greatly appreciated. Features without documentation are
+              unfinished so to the project, it&rsquo;s <em>as important</em> as the code.
+            </p>
+            <p>
+              We generally do not create tickets for updating documentation so if there is text you
+              think should be updated or rephrased then feel free to submit a PR for that. This site
+              is in the main repository under the <code>website</code> directory. We use
+              <a href="https://docusaurus.io/">Docusaurus</a> to create the site so there is plenty
+              of existing documentation and tutorials around to get started.
+            </p>
+            <p>To set up a local documentation development environment, do the following:</p>
+            <ul>
+              <li>
+                <a href="https://docs.npmjs.com/cli/v8/configuring-npm/install">Install npm</a>
+              </li>
+              <li><code>cd website</code></li>
+              <li><code>npm install</code></li>
+              <li><code>npm run start</code></li>
+            </ul>
+            <p>
+              After it has all installed and is running, you should see the site at
+              <a href="http://localhost:3000"><code>http://localhost:3000</code></a
+              >. Any changes made to the site text will be immediately reflected in the browser.
+            </p>
+            <h4 id="versioning">Versioning</h4>
+            <p>
+              We employ a versioning system where we have the &ldquo;latest&rdquo; documentation AKA
+              &ldquo;Next Version&rdquo; which has all the changes that have occurred since the last
+              release. We also keep the last release documentation as well as the version before
+              that.
+            </p>
+            <p>
+              There isn&rsquo;t usually a reason to update released documentation so we don&rsquo;t
+              generally update the documents in the <code>versioned_docs</code> or
+              <code>versioned_sidebars</code> directories.
+            </p>
+            <p>
+              The &ldquo;next version&rdquo; docs are mainly in
+              <code>website/docs</code> with some &ldquo;version independent&rdquo; documents in
+              <code>src/pages</code>. Any updates should be made in the
+              <code>website/docs</code> directory.
+            </p>
+            <h4 id="languages">Languages</h4>
+            <p>
+              The default documents of the Wails project are English documents. We use the
+              &ldquo;crowdin&rdquo; tool to translate documents in other languages and synchronize
+              them to the website. You can
+              <a href="https://crowdin.com/project/wails">join our project</a>
+              and submit your translations to make contributions.
+            </p>
+            <h5 id="add-new-language">Add new language</h5>
+            <p>
+              If you want to add a new language to the documentation, please follow the prompts to
+              <a
+                href="https://github.com/wailsapp/wails/issues/new?assignees=&amp;labels=documentation&amp;template=documentation.yml"
+                >fill in and submit an Issue</a
+              >. After being confirmed by the maintainer, we will add the language to the
+              &ldquo;crowdin&rdquo; and you will then be able to submit your translation.
+            </p>
+            <h3 id="helping-others">Helping Others</h3>
+            <p>
+              A great way to contribute to the project is to help others who are experiencing
+              difficulty. This is normally reported as a ticket or a message on the Wails slack
+              channel. Even just clarifying the issue can really help out. Sometimes, when an issue
+              is discussed and gets resolved, we create a guide out of it to help others who face
+              the same issues.
+            </p>
+            <p>
+              To join the Wails slack channel, accept the invite
+              <a
+                href="https://gophers.slack.com/join/shared_invite/zt-197vymgt3-sJt4oyakb6nqlVKjXTyeVw#/shared-invite/email"
+                >here</a
+              >
+              and join us on the channel by following
+              <a href="https://gophers.slack.com/?redir=%2Fmessages%2FCJ4P9F7MZ%2F">this link</a>.
+            </p>
+          </article>
+
+          <!-- Comments -->
+          <div class="giscus"></div>
+        </div>
+      </main>
 
       <!-- Main End -->
 
-      <!-- Footer -->
-      <footer class="bg-slate-50">
+      <!-- Footer Start -->
+      <!-- <footer class="bg-slate-400">
         <div class="container mx-auto px-4 py-2">
           <div class="text-center">
             @Copyright 2022 米司特包 |
-            <a href="https://baidu.com" title="备案">鄂ICP备20006255号</a>
+            <a href="https://beian.miit.gov.cn/#/Integrated/recordQuery" title="备案"
+              >鄂ICP备20006255号</a
+            >
           </div>
         </div>
-      </footer>
+      </footer> -->
       <!-- Footer End -->
     </div>
     
+
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="misitebao/static-theme-misipage"
+      data-repo-id="R_kgDOGUwLQA"
+      data-category="Comments"
+      data-category-id="DIC_kwDOGUwLQM4CR-Bm"
+      data-mapping="og:title"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="zh-CN"
+      crossorigin="anonymous"
+      async
+    ></script>
   </body>
 </html>
