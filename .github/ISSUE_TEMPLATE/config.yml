@@ -1,0 +1,13 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GitHub Discussions
+    url: https://github.com/misitebao/static-theme-misipage/discussions
+    about: If your question is not a feature or a bug, please go to the discussion panel and retrieve if your question already exists before submitting.
+
+  - name: Discord
+    url: https://discord.gg/9TKjJCsUzG
+    about: Discord channel
+
+  - name: 中文社区 QQ 群
+    url: https://qm.qq.com/cgi-bin/qm/qr?k=dBpHFuSL9wRZ7KSk84iRi780ScsOehhB&jump_from=webapi
+    about: 如果你是中文用户，可以加入中文社区QQ群反馈您的问题。
