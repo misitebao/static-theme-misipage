@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'url';
+import { extname } from 'path';
 
 import { defineConfig } from 'vite';
 import { createHtmlPlugin } from 'vite-plugin-html';
@@ -15,19 +16,21 @@ export default defineConfig({
           template: 'index.html',
           injectOptions: {
             data: {
-              title: '首页',
+              title: 'MisiPage - Static Homepage Theme',
+              description: 'Static personal homepage developed with AlpineJS and Tailwind CSS',
             },
           },
         },
-        // {
-        //   filename: 'projects.html',
-        //   template: 'projects.html',
-        //   injectOptions: {
-        //     data: {
-        //       title: '项目',
-        //     },
-        //   },
-        // },
+        {
+          filename: 'projects.html',
+          template: 'projects.html',
+          injectOptions: {
+            data: {
+              title: '项目',
+              description: '',
+            },
+          },
+        },
         // {
         //   filename: 'videos.html',
         //   template: 'videos.html',
@@ -55,15 +58,16 @@ export default defineConfig({
         //     },
         //   },
         // },
-        // {
-        //   filename: 'sponsors.html',
-        //   template: 'sponsors.html',
-        //   injectOptions: {
-        //     data: {
-        //       title: '赞助',
-        //     },
-        //   },
-        // },
+        {
+          filename: 'sponsors.html',
+          template: 'sponsors.html',
+          injectOptions: {
+            data: {
+              title: '赞助',
+              description: '',
+            },
+          },
+        },
         // {
         //   filename: '404.html',
         //   template: '404.html',
@@ -75,6 +79,17 @@ export default defineConfig({
         // },
       ],
     }),
+    // (() => {
+    //   return {
+    //     name: 'vite-plugin',
+    //     handleHotUpdate() {
+    //       console.log('vite-plugin');
+    //     },
+    //     buildStart() {
+    //       console.log('vite-plugin');
+    //     },
+    //   };
+    // })(),
   ],
   resolve: {
     alias: {
@@ -82,11 +97,28 @@ export default defineConfig({
     },
   },
   build: {
+    cssCodeSplit: true,
     rollupOptions: {
+      input: {},
       output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
+        entryFileNames: `assets/js/[name].js`,
+        chunkFileNames: `assets/js/chunk/[name].js`,
+        assetFileNames: function (chunkInfo) {
+          let assetFileNames = 'assets/[name].[ext]';
+          let extMapping = {
+            images: ['.jpg', '.png'],
+            fonts: ['.ttf', '.woff2'],
+            styles: ['.css'],
+          };
+
+          for (const extType in extMapping) {
+            if (extMapping[extType].indexOf(extname(chunkInfo.name)) != -1) {
+              assetFileNames = `assets/${extType}/[name].[ext]`;
+            }
+          }
+
+          return assetFileNames;
+        },
       },
     },
   },
