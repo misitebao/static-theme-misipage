@@ -1,36 +1,38 @@
 # https://taskfile.dev
 
-version: '3'
+version: "3"
 
 tasks:
   install:
     desc: Install dependencies
     cmds:
-      - npm i
+      - pnpm i
+    sources:
+      - "package.json"
 
   default:
     deps: [install]
     aliases: [s, start]
     cmds:
-      - npm run dev
+      - pnpm run dev
 
   build:
     deps: [install]
     cmds:
-      - npm run build
+      - pnpm run build
 
   build:giscus-theme:
     deps: [install]
     aliases: [bgt]
     cmds:
-      - npm run build:giscus-theme
+      - pnpm run build:giscus-theme
 
   preview:
     deps: [build]
     cmds:
-      - npm run preview
+      - pnpm run preview
 
-  lint:fix:
+  lint:
     deps: [install]
     cmds:
-      - npm run lint:fix
+      - pnpm run lint:fix
