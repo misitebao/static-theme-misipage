@@ -1,8 +1,8 @@
 name: Build and Deploy
 
 on:
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -23,10 +23,14 @@ jobs:
         with:
           hugo-version: "16"
 
-      - name: Build Site
-        run: |
-          npm install
-          npm run build
+      - name: Install Task
+        uses: arduino/setup-task@v1
+        with:
+          version: 3.x
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build
+        run: task build
 
       - name: Deploy to Server
         uses: hengkx/ssh-deploy@v1.0.1
