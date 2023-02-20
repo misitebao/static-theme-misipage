@@ -1,0 +1,11 @@
+[build]
+command = "corepack enable && corepack prepare pnpm@8.2.0 --activate && pnpm run build"
+
+  [build.environment]
+  NODE_VERSION = "16.14.0"
+
+[[headers]]
+for = "/*"
+
+  [headers.values]
+  Access-Control-Allow-Origin = "*"
