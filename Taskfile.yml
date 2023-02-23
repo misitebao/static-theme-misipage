@@ -6,9 +6,12 @@ tasks:
   install:
     desc: Install dependencies
     cmds:
-      - pnpm i
+      - corepack enable
+      - corepack prepare pnpm@8.2.0 --activate
+      - pnpm install
     sources:
-      - "package.json"
+      - package.json
+      - pnpm-lock.yaml
 
   default:
     deps: [install]
