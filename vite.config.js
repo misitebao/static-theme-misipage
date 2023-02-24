@@ -12,8 +12,8 @@ export default defineConfig({
       pages: [
         {
           // entry: "src/main.ts",
-          filename: 'index.html',
           template: 'index.html',
+          filename: 'index.html',
           injectOptions: {
             data: {
               title: 'MisiPage - Static Homepage Theme',
@@ -22,45 +22,38 @@ export default defineConfig({
           },
         },
         {
-          filename: 'projects.html',
-          template: 'projects.html',
+          template: '404.html',
+          filename: '404.html',
           injectOptions: {
             data: {
-              title: '项目',
+              title: '404',
               description: '',
             },
           },
         },
-        // {
-        //   filename: 'videos.html',
-        //   template: 'videos.html',
-        //   injectOptions: {
-        //     data: {
-        //       title: '视频',
-        //     },
-        //   },
-        // },
-        // {
-        //   filename: 'about.html',
-        //   template: 'about.html',
-        //   injectOptions: {
-        //     data: {
-        //       title: '关于',
-        //     },
-        //   },
-        // },
-        // {
-        //   filename: 'links.html',
-        //   template: 'links.html',
-        //   injectOptions: {
-        //     data: {
-        //       title: '友情链接',
-        //     },
-        //   },
-        // },
         {
-          filename: 'sponsors.html',
+          template: 'projects.html',
+          filename: 'projects.html',
+          injectOptions: {
+            data: {
+              title: 'Projects',
+              description: '',
+            },
+          },
+        },
+        {
+          template: 'videos.html',
+          filename: 'videos.html',
+          injectOptions: {
+            data: {
+              title: 'Videos',
+              description: '',
+            },
+          },
+        },
+        {
           template: 'sponsors.html',
+          filename: 'sponsors.html',
           injectOptions: {
             data: {
               title: '赞助',
@@ -68,28 +61,48 @@ export default defineConfig({
             },
           },
         },
-        // {
-        //   filename: '404.html',
-        //   template: '404.html',
-        //   injectOptions: {
-        //     data: {
-        //       title: '404',
-        //     },
-        //   },
-        // },
+        {
+          template: 'about.html',
+          filename: 'about.html',
+          injectOptions: {
+            data: {
+              title: 'About',
+              description: '',
+            },
+          },
+        },
+        {
+          template: 'links.html',
+          filename: 'links.html',
+          injectOptions: {
+            data: {
+              title: 'Links',
+              description: '',
+            },
+          },
+        },
+        {
+          template: 'post.html',
+          filename: 'post.html',
+          injectOptions: {
+            data: {
+              title: 'Post',
+              description: '',
+            },
+          },
+        },
+        {
+          template: 'post-list.html',
+          filename: 'post-list.html',
+          injectOptions: {
+            data: {
+              title: 'Post List',
+              description: '',
+            },
+          },
+        },
       ],
     }),
-    // (() => {
-    //   return {
-    //     name: 'vite-plugin',
-    //     handleHotUpdate() {
-    //       console.log('vite-plugin');
-    //     },
-    //     buildStart() {
-    //       console.log('vite-plugin');
-    //     },
-    //   };
-    // })(),
   ],
   resolve: {
     alias: {
@@ -104,6 +117,7 @@ export default defineConfig({
         entryFileNames: `assets/js/[name].js`,
         chunkFileNames: `assets/js/chunk/[name].js`,
         assetFileNames: function (chunkInfo) {
+          console.log(chunkInfo.name);
           let assetFileNames = 'assets/[name].[ext]';
           let extMapping = {
             images: ['.jpg', '.png'],

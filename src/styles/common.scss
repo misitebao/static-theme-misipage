@@ -1,0 +1,117 @@
+@use './theme/light';
+@use './theme/dark';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  // ::-webkit-scrollbar-track {
+  //   background: #e7e7e7;
+  // }
+
+  // ::-webkit-scrollbar-track:hover {
+  //   // background: red;
+  // }
+
+  // ::-webkit-scrollbar-thumb {
+  //   background: #cccccc;
+  //   // border-radius: 1px;
+  //   // border: 2px solid #e7e7e7;
+  // }
+
+  // ::-webkit-scrollbar-thumb:hover {
+  //   // background: blue;
+  // }
+
+  :root {
+    overflow-y: overlay;
+  }
+
+  [data-theme='light'] {
+    color-scheme: light;
+    --color-base: theme('colors.white');
+    --color-primary: #{light.$color-primary};
+    --color-secondary: #f000b8;
+    --color-text: theme('colors.black');
+    --color-text-secondary: theme('colors.black');
+    --color-link: var(--color-primary);
+    --color-border: var(--color-primary);
+    --color-info: #3abff8;
+    --color-success: #36d399;
+    --color-warning: #fbbd23;
+    --color-error: #f87272;
+
+    --border-radius: 60px;
+
+    ::selection {
+      background-color: var(--color-primary);
+      color: var(--color-base);
+    }
+
+    ::-webkit-scrollbar-track {
+      background: yellow;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+      // background: red;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: pink;
+      // border-radius: 1px;
+      // border: 2px solid #e7e7e7;
+    }
+  }
+
+  [data-theme='dark'] {
+    color-scheme: dark;
+    --color-base: #353537;
+    --color-primary: #{dark.$color-primary};
+    --color-secondary: #f000b8;
+    --color-text: theme('colors.black');
+    --color-text-secondary: theme('colors.black');
+    --color-link: var(--color-primary);
+    --color-border: var(--color-primary);
+    --color-info: #3abff8;
+    --color-success: #36d399;
+    --color-warning: #fbbd23;
+    --color-error: #f87272;
+
+    --border-radius: 60px;
+
+    ::selection {
+      background-color: var(--color-primary);
+      color: var(--color-base);
+    }
+
+    ::-webkit-scrollbar-track {
+      background: red;
+    }
+
+    ::-webkit-scrollbar-track:hover {
+      // background: red;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: blue;
+      // border-radius: 1px;
+      // border: 2px solid #e7e7e7;
+    }
+  }
+}
+
+@layer components {
+  .mobile {
+    @apply lg:hidden;
+  }
+
+  .desktop {
+    @apply hidden lg:block;
+  }
+}

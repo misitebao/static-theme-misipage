@@ -1,21 +1,30 @@
-<h1 align="center">Static Theme Misipage</h1>
+<div align="center">
 
-<p align="center">
+<h1>Static Theme Misipage</h1>
+
+<p>
   <a href="./LICENSE">
-    <img alt="GitHub" src="https://img.shields.io/github/license/misitebao/static-theme-misipage"/>
+    <img alt="GitHub" src="https://img.shields.io/github/license/misitebao/static-theme-misipage?label=License"/>
+  </a>
+  <a href="https://github.com/misitebao/static-theme-misipage">
+    <img 
+      alt="GitHub tag (latest SemVer pre-release)" 
+      src="https://img.shields.io/github/v/tag/misitebao/static-theme-misipage?include_prereleases&label=Version"/>
   </a>
   <a href="https://github.com/misitebao/yakia">
     <img
-      alt="GitHub"
-      src="https://cdn.jsdelivr.net/gh/misitebao/yakia@main/assets/badge_flat.svg"
+      alt="Readme Style"
+      src="https://img.shields.io/badge/Readme_Style-Yakia-2ea44f?logo=github"
     />
   </a>
-  <a href="https://github.com/misitebao/static-theme-misipage">
-    <img alt="GitHub tag (latest SemVer pre-release)" src="https://img.shields.io/github/v/tag/misitebao/static-theme-misipage?include_prereleases&label=version"/>
+  <a href="https://discord.gg/9TKjJCsUzG">
+    <img
+      alt="Discord"
+      src="https://dcbadge.vercel.app/api/server/9TKjJCsUzG?style=flat"
+    />
   </a>
 </p>
 
-<div align="center">
 <strong>
 <samp>
 
@@ -32,28 +41,21 @@
 
 - [Table of Contents](#table-of-contents)
 - [Introductions](#introductions)
-  - [Official Website](#official-website)
-  - [Background](#background)
   - [Transplant](#transplant)
-- [Graphic Demo](#graphic-demo)
 - [Features](#features)
-- [Architecture](#architecture)
 - [Getting Started](#getting-started)
 - [Maintainer](#maintainer)
-- [Contributors](#contributors)
 - [Community Exchange](#community-exchange)
 - [Part Of Users](#part-of-users)
 - [Release History](#release-history)
-- [Donators](#donators)
-- [Sponsors](#sponsors)
-- [Special Thanks](#special-thanks)
 - [License](#license)
 
 </details>
 
 ## Introductions
 
-This project is a static template suitable for blog sites and can be used in any template engine.
+This project is a static template suitable for blog sites and can be used in any
+template engine.
 
 <!-- ### Official Website -->
 
@@ -123,12 +125,15 @@ npm run preview
 
 Thanks to the maintainers of these projects:
 
-<a href="https://github.com/misitebao"><img src="https://github.com/misitebao.png" width="40" height="40" alt="misitebao" title="misitebao"/></a>
+<a href="https://github.com/misitebao">
+  <img src="https://github.com/misitebao.png" width="40" height="40" alt="misitebao" title="misitebao"/>
+</a>
 
 <details>
   <summary>Click me to Open/Close the contributors listing</summary>
 
-- [Misitebao](https://github.com/misitebao) - Project author, full stack engineer.
+- [Misitebao](https://github.com/misitebao) - Project author, full stack
+  engineer.
 
 </details>
 
@@ -140,13 +145,15 @@ Thanks to the maintainers of these projects:
 
 <!-- Fill in the online and offline communication address of the project here, which can be an instant messaging group, a community, or a discussion group, etc. -->
 
-<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=dBpHFuSL9wRZ7KSk84iRi780ScsOehhB&jump_from=webapi">Chinese Community QQ Group</a> - Group number: 763146965
+<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=dBpHFuSL9wRZ7KSk84iRi780ScsOehhB&jump_from=webapi">Chinese
+Community QQ Group</a> - Group number: 763146965
 
 ## Part Of Users
 
 <!-- Fill in the user list of the project here, and tell visitors which users are using your project. -->
 
-- [hugo-theme-misipage](https://github.com/misitebao/hugo-theme-misipage) - [Hugo](https://github.com/gohugoio/hugo) ported version of Misipage theme
+- [hugo-theme-misipage](https://github.com/misitebao/hugo-theme-misipage) -
+  [Hugo](https://github.com/gohugoio/hugo) ported version of Misipage theme
 
 ## Release History
 

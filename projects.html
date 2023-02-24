@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="theme" x-bind:data-theme="theme">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%- title %></title>
+    <meta name="description" content="<%- description %>" />
+    <meta property="og:title" content="<%- title %>" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class=""></div>
     <script type="module" src="./src/pages/projects/main.js"></script>
   </body>
 </html>

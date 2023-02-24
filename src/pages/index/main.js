@@ -1,11 +1,20 @@
 import Alpine from 'alpinejs';
 
+import * as Giscus from '../../hooks/giscus';
+
 import './styles/main.scss';
+
+import '@fortawesome/fontawesome-free/css/fontawesome.css';
+import '@fortawesome/fontawesome-free/css/regular.css';
+import '@fortawesome/fontawesome-free/css/brands.css';
+import '@fortawesome/fontawesome-free/css/solid.css';
 
 import theme from '../../hooks/theme';
 
 window.Alpine = Alpine;
 
-Alpine.data('theme', theme);
+Alpine.store('theme', theme);
 
 Alpine.start();
+
+Giscus.init();
